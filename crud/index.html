@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+             <h2>CRUD</h2>
+             <p>product management system</p>
+        </div>
+        <div class="inputs">
+                 <input type="text" placeholder="title" id="title">
+                 <div class="price">
+                     <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                     <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                     <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                     <small class="total" id="total"></small>
+                 </div>
+                 <input type="number" placeholder="count" id="count">
+                 <input type="text" placeholder="category" id="category">
+                 <button type="submit" id="create">create</button>
+        </div>
+        <div class="outputs">
+           <input onkeyup="searchPro()" type="text" placeholder="Search" id="search">
+           <div class="btn-search">
+               <button onclick="getSearch(this.id)" id="title" type="submit">Search by title</button>
+               <button onclick="getSearch(this.id)" id="category" type="submit">Search by category</button>
+           </div>
+        </div>
+         <div id="deleteAll"></div>
+        <table>
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>title</td>
+                    <td>price</td>
+                    <td>taxes</td>
+                    <td>ads</td>
+                    <!-- <td>discount</td> -->
+                    <td>total</td>
+                    <td>category</td>
+                    <td>update</td>
+                    <td>delete</td>
+                    
+                </tr>
+            </thead>
+            <tbody id="showData">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>samsong</td>
+                    <td>3000</td>
+                    <td>400</td>
+                    <td>3400</td>
+                    <td>400</td>
+                    <td>5000</td>
+                    <td>phone</td>
+                    <td><button type="submit">update</button></td>
+                    <td><button type="submit">delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>samsong</td>
+                    <td>3000</td>
+                    <td>400</td>
+                    <td>3400</td>
+                    <td>400</td>
+                    <td>5000</td>
+                    <td>phone</td>
+                    <td><button type="submit">update</button></td>
+                    <td><button type="submit">delete</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
